@@ -215,6 +215,23 @@ public:
         return t;
     }
     
+    static Matrix perspective(GLfloat fovy, GLfloat aspect, GLfloat zNear, GLfloat zFar){
+        Matrix t;
+        const GLfloat dz(zFar - zNear);
+        
+        if (dz != 0.0f) {
+            t.loadIdentity();
+            t.matrix[5] = 1.0f / tan(fovy * 0.5f);
+            t.matrix[0] = t.matrix[5] /aspect;
+            t.matrix[10] = -(zFar + zNear) / dz;
+            t.matrix[11] = -1.0f;
+            t.matrix[14] = -2.0f * zFar * zNear /dz;
+            t.matrix[15] = 0.0f;
+        }
+        
+        return t;
+    }
+    
     Matrix operator*(const Matrix&m) const{
         Matrix t;
         

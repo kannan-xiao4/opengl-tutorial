@@ -48,9 +48,9 @@ int main(int argc, const char * argv[]) {
         glUseProgram(program);
         
         const GLfloat *const size(window.getSize());
-        const GLfloat scale(window.getScale() * 2.0f);
-        const GLfloat w(size[0]/scale), h(size[1]/scale);
-        const Matrix projection(Matrix::frustum(-w, w, -h, h, 1.0f, 10.0f));
+        const GLfloat fovy(window.getScale() * 0.01f);
+        const GLfloat aspect(size[0] / size[1]);
+        const Matrix projection(Matrix::perspective(fovy, aspect, 1.0f, 10.0f));
 
         const GLfloat *const location(window.getLocation());
         const Matrix model(Matrix::translate(location[0], location[1], 0.0f));
