@@ -8,6 +8,7 @@
 #include "load_window.hpp"
 #include "class/Shape.h"
 #include "class/Window.h"
+#include "class/Matrix.h"
 
 static constexpr Object::Vertex rectangleVertex[] = {
     { -0.5f, -0.5f }, { 0.5f, -0.5f }, { 0.5f, 0.5f }, { -0.5f, 0.5f }
@@ -36,9 +37,8 @@ int main(int argc, const char * argv[]) {
  
     const GLuint program(loadProgram("point.vert", "point.frag"));
     
-    const GLint sizeLoc(glGetUniformLocation(program, "size"));
-    const GLint scaleLoc(glGetUniformLocation(program, "scale"));
-    const GLint locationLoc(glGetUniformLocation(program, "location"));
+    const GLint modelViewLoc(glGetUniformLocation(program, "modelview"));
+    const GLint projectionLoc(glGetUniformLocation(program, "projection"));
 
     std::unique_ptr<const Shape> shape(new Shape(2, 4, rectangleVertex));
 
@@ -47,9 +47,20 @@ int main(int argc, const char * argv[]) {
 
         glUseProgram(program);
         
-        glUniform2fv(sizeLoc, 1, window.getSize());
-        glUniform1f(scaleLoc, window.getScale());
-        glUniform2fv(locationLoc, 1, window.getLocation());
+        const GLfloat *const size(window.getSize());
+        const GLfloat scale(window.getScale() * 2.0f);
+        const GLfloat w(size[0]/scale), h(size[1]/scale);
+        const Matrix projection(Matrix::orthogonal(-w, w, -h, h, 1.0f, 10.0f));
+
+        const GLfloat *const location(window.getLocation());
+        const Matrix model(Matrix::translate(location[0], location[1], 0.0f));
+        
+        const Matrix view(Matrix::lookat(3.0f, 4.0f, 5.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f));
+        
+        const Matrix modelview(view * model);
+        
+        glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, projection.data());
+        glUniformMatrix4fv(modelViewLoc, 1, GL_FALSE, modelview.data());
         
         shape->draw();
         

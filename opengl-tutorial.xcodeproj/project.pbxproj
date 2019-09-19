@@ -26,7 +26,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4181CC092324BF1B0070889C /* opengl-tutorial */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "opengl-tutorial"; path = "/Users/henanxiao/Development/Personal/opengl-tutorial/build/Debug/opengl-tutorial"; sourceTree = "<absolute>"; };
 		4181CC2B2324BFBA0070889C /* log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = log.cpp; sourceTree = "<group>"; };
 		4181CC2C2324BFBA0070889C /* load_window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = load_window.cpp; sourceTree = "<group>"; };
 		4181CC2D2324BFBA0070889C /* point.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = point.vert; sourceTree = "<group>"; };
@@ -38,6 +37,8 @@
 		4181CC372324BFBA0070889C /* load_window.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = load_window.hpp; sourceTree = "<group>"; };
 		4181CC382324BFBA0070889C /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4181CC3E2324F5700070889C /* Window.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
+		41C2FCB7233387E800D806B6 /* opengl-tutorial */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "opengl-tutorial"; sourceTree = BUILT_PRODUCTS_DIR; };
+		41C2FCB8233390B300D806B6 /* Matrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +64,7 @@
 				4181CC2E2324BFBA0070889C /* Makefile */,
 				4181CC362324BFBA0070889C /* log.hpp */,
 				4181CC372324BFBA0070889C /* load_window.hpp */,
+				41C2FCB7233387E800D806B6 /* opengl-tutorial */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +74,7 @@
 				4181CC342324BFBA0070889C /* Shape.h */,
 				4181CC352324BFBA0070889C /* Object.h */,
 				4181CC3E2324F5700070889C /* Window.h */,
+				41C2FCB8233390B300D806B6 /* Matrix.h */,
 			);
 			path = class;
 			sourceTree = "<group>";
@@ -93,7 +96,7 @@
 			);
 			name = "opengl-tutorial";
 			productName = "opengl-tutorial";
-			productReference = 4181CC092324BF1B0070889C /* opengl-tutorial */;
+			productReference = 41C2FCB7233387E800D806B6 /* opengl-tutorial */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
