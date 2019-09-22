@@ -26,6 +26,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		413AE68323378E0000060738 /* ShapeIndex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShapeIndex.h; sourceTree = "<group>"; };
+		413AE6842337BFA600060738 /* SolidShapeIndex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SolidShapeIndex.h; sourceTree = "<group>"; };
+		413AE6852337C3E700060738 /* SolidShape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SolidShape.h; sourceTree = "<group>"; };
 		4181CC2B2324BFBA0070889C /* log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = log.cpp; sourceTree = "<group>"; };
 		4181CC2C2324BFBA0070889C /* load_window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = load_window.cpp; sourceTree = "<group>"; };
 		4181CC2D2324BFBA0070889C /* point.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = point.vert; sourceTree = "<group>"; };
@@ -75,6 +78,9 @@
 				4181CC352324BFBA0070889C /* Object.h */,
 				4181CC3E2324F5700070889C /* Window.h */,
 				41C2FCB8233390B300D806B6 /* Matrix.h */,
+				413AE68323378E0000060738 /* ShapeIndex.h */,
+				413AE6842337BFA600060738 /* SolidShapeIndex.h */,
+				413AE6852337C3E700060738 /* SolidShape.h */,
 			);
 			path = class;
 			sourceTree = "<group>";
