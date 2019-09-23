@@ -17,9 +17,22 @@ public:
         return matrix;
     }
     
+    // 随伴行列を転置した行列を求めている つまり p.203 の(79) 式 G　を求める
+    void getNormalMatrix(GLfloat *m) const{
+        m[0] = matrix[5] * matrix[10] - matrix[6] * matrix[9];
+        m[1] = matrix[6] * matrix[8] - matrix[4] * matrix[10];
+        m[2] = matrix[4] * matrix[9] - matrix[5] * matrix[8];
+        m[3] = matrix[9] * matrix[2] - matrix[10] * matrix[1]; // -dyx = - (axy * azz - azy * axz) = azy * axz - axy * azz
+        m[4] = matrix[10] * matrix[0] - matrix[8] * matrix[2];
+        m[5] = matrix[8] * matrix[1] - matrix[9] * matrix[0];
+        m[6] = matrix[1] * matrix[6] - matrix[2] * matrix[5];
+        m[7] = matrix[2] * matrix[4] - matrix[0] * matrix[6];
+        m[8] = matrix[0] * matrix[5] - matrix[1] * matrix[4];
+    }
+    
     void loadIdentity(){
         std::fill(matrix, matrix + 16, 0.0f); //行列の要素をすべて0にする
-        matrix[0] = matrix[5] = matrix[10] = matrix[15] = 1.0f;　// 対角成分にだけ 1 を入れる
+        matrix[0] = matrix[5] = matrix[10] = matrix[15] = 1.0f; // 対角成分にだけ 1 を入れる
     }
 
     // 単位行列を作成する
