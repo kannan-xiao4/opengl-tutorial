@@ -29,6 +29,9 @@
 		413AE68323378E0000060738 /* ShapeIndex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShapeIndex.h; sourceTree = "<group>"; };
 		413AE6842337BFA600060738 /* SolidShapeIndex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SolidShapeIndex.h; sourceTree = "<group>"; };
 		413AE6852337C3E700060738 /* SolidShape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SolidShape.h; sourceTree = "<group>"; };
+		413AE68623399C6000060738 /* Vector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
+		413AE6872339A42100060738 /* Material.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Material.h; sourceTree = "<group>"; };
+		413AE6882339A4B100060738 /* Uniform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Uniform.h; sourceTree = "<group>"; };
 		4181CC2B2324BFBA0070889C /* log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = log.cpp; sourceTree = "<group>"; };
 		4181CC2C2324BFBA0070889C /* load_window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = load_window.cpp; sourceTree = "<group>"; };
 		4181CC2D2324BFBA0070889C /* point.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = point.vert; sourceTree = "<group>"; };
@@ -81,6 +84,9 @@
 				413AE68323378E0000060738 /* ShapeIndex.h */,
 				413AE6842337BFA600060738 /* SolidShapeIndex.h */,
 				413AE6852337C3E700060738 /* SolidShape.h */,
+				413AE68623399C6000060738 /* Vector.h */,
+				413AE6872339A42100060738 /* Material.h */,
+				413AE6882339A4B100060738 /* Uniform.h */,
 			);
 			path = class;
 			sourceTree = "<group>";
